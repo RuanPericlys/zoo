@@ -1,0 +1,5 @@
+<h1>Edit Especie</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.especie_path(@conn, :update, @especie)) %>
+
+<span><%= link "Back", to: Routes.especie_path(@conn, :index) %></span>

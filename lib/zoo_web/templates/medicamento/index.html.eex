@@ -1,0 +1,28 @@
+<h1>Listing Medicamentos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codmedicamento</th>
+      <th>Nomemedicaento</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for medicamento <- @medicamentos do %>
+    <tr>
+      <td><%= medicamento.codmedicamento %></td>
+      <td><%= medicamento.nomemedicaento %></td>
+
+      <td>
+        <%= link "Show", to: Routes.medicamento_path(@conn, :show, medicamento) %>
+        <%= link "Edit", to: Routes.medicamento_path(@conn, :edit, medicamento) %>
+        <%= link "Delete", to: Routes.medicamento_path(@conn, :delete, medicamento), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Medicamento", to: Routes.medicamento_path(@conn, :new) %></span>

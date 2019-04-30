@@ -1,0 +1,34 @@
+<h1>Listing Consultas</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codanimal</th>
+      <th>Matricula</th>
+      <th>Data</th>
+      <th>Diagnosticoconsulta</th>
+      <th>Codconsulta</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for consultas <- @consultas do %>
+    <tr>
+      <td><%= consultas.codanimal %></td>
+      <td><%= consultas.matricula %></td>
+      <td><%= consultas.data %></td>
+      <td><%= consultas.diagnosticoconsulta %></td>
+      <td><%= consultas.codconsulta %></td>
+
+      <td>
+        <%= link "Show", to: Routes.consultas_path(@conn, :show, consultas) %>
+        <%= link "Edit", to: Routes.consultas_path(@conn, :edit, consultas) %>
+        <%= link "Delete", to: Routes.consultas_path(@conn, :delete, consultas), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Consultas", to: Routes.consultas_path(@conn, :new) %></span>

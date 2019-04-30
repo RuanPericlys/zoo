@@ -1,0 +1,18 @@
+<h1>Show Prescricao</h1>
+
+<ul>
+
+  <li>
+    <strong>Codconsulta:</strong>
+    <%= @prescricao.codconsulta %>
+  </li>
+
+  <li>
+    <strong>Codmedicamento:</strong>
+    <%= @prescricao.codmedicamento %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.prescricao_path(@conn, :edit, @prescricao) %></span>
+<span><%= link "Back", to: Routes.prescricao_path(@conn, :index) %></span>

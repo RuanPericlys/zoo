@@ -1,0 +1,38 @@
+<h1>Show Animais</h1>
+
+<ul>
+
+  <li>
+    <strong>Nomeanimal:</strong>
+    <%= @animais.nomeAnimal %>
+  </li>
+
+  <li>
+    <strong>Codespecie:</strong>
+    <%= @animais.codEspecie %>
+  </li>
+
+  <li>
+    <strong>Codanimal:</strong>
+    <%= @animais.codAnimal %>
+  </li>
+
+  <li>
+    <strong>Codanimalpai:</strong>
+    <%= @animais.codAnimalPai %>
+  </li>
+
+  <li>
+    <strong>Codanimalmae:</strong>
+    <%= @animais.codAnimalMae %>
+  </li>
+
+  <li>
+    <strong>Dtnascanimal:</strong>
+    <%= @animais.dtNascAnimal %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.animais_path(@conn, :edit, @animais) %></span>
+<span><%= link "Back", to: Routes.animais_path(@conn, :index) %></span>

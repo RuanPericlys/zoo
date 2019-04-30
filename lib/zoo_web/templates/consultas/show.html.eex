@@ -1,0 +1,33 @@
+<h1>Show Consultas</h1>
+
+<ul>
+
+  <li>
+    <strong>Codanimal:</strong>
+    <%= @consultas.codanimal %>
+  </li>
+
+  <li>
+    <strong>Matricula:</strong>
+    <%= @consultas.matricula %>
+  </li>
+
+  <li>
+    <strong>Data:</strong>
+    <%= @consultas.data %>
+  </li>
+
+  <li>
+    <strong>Diagnosticoconsulta:</strong>
+    <%= @consultas.diagnosticoconsulta %>
+  </li>
+
+  <li>
+    <strong>Codconsulta:</strong>
+    <%= @consultas.codconsulta %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.consultas_path(@conn, :edit, @consultas) %></span>
+<span><%= link "Back", to: Routes.consultas_path(@conn, :index) %></span>

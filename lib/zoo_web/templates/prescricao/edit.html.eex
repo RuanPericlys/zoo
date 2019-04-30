@@ -1,0 +1,5 @@
+<h1>Edit Prescricao</h1>
+
+<%= render "form.html", Map.put(assigns, :action, Routes.prescricao_path(@conn, :update, @prescricao)) %>
+
+<span><%= link "Back", to: Routes.prescricao_path(@conn, :index) %></span>

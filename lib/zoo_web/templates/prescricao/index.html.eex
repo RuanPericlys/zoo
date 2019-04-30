@@ -1,0 +1,28 @@
+<h1>Listing Prescricoes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codconsulta</th>
+      <th>Codmedicamento</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for prescricao <- @prescricoes do %>
+    <tr>
+      <td><%= prescricao.codconsulta %></td>
+      <td><%= prescricao.codmedicamento %></td>
+
+      <td>
+        <%= link "Show", to: Routes.prescricao_path(@conn, :show, prescricao) %>
+        <%= link "Edit", to: Routes.prescricao_path(@conn, :edit, prescricao) %>
+        <%= link "Delete", to: Routes.prescricao_path(@conn, :delete, prescricao), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Prescricao", to: Routes.prescricao_path(@conn, :new) %></span>

@@ -1,0 +1,18 @@
+<h1>Show Medicamento</h1>
+
+<ul>
+
+  <li>
+    <strong>Codmedicamento:</strong>
+    <%= @medicamento.codmedicamento %>
+  </li>
+
+  <li>
+    <strong>Nomemedicaento:</strong>
+    <%= @medicamento.nomemedicaento %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.medicamento_path(@conn, :edit, @medicamento) %></span>
+<span><%= link "Back", to: Routes.medicamento_path(@conn, :index) %></span>

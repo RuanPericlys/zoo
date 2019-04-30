@@ -1,0 +1,36 @@
+<h1>Listing Funcionarios</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Matricula</th>
+      <th>Nome</th>
+      <th>Endereco</th>
+      <th>Email</th>
+      <th>Crmv</th>
+      <th>Especialidade</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for funcionario <- @funcionarios do %>
+    <tr>
+      <td><%= funcionario.matricula %></td>
+      <td><%= funcionario.nome %></td>
+      <td><%= funcionario.endereco %></td>
+      <td><%= funcionario.email %></td>
+      <td><%= funcionario.crmv %></td>
+      <td><%= funcionario.especialidade %></td>
+
+      <td>
+        <%= link "Show", to: Routes.funcionario_path(@conn, :show, funcionario) %>
+        <%= link "Edit", to: Routes.funcionario_path(@conn, :edit, funcionario) %>
+        <%= link "Delete", to: Routes.funcionario_path(@conn, :delete, funcionario), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Funcionario", to: Routes.funcionario_path(@conn, :new) %></span>

@@ -1,0 +1,31 @@
+<nav class="navbar navbar-dark bg-dark navbar-expand-lg" >
+  <%= link "Zoo", to: Routes.page_path(@conn, :index), class: "navbar-brand" %>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+    </ul>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+          <%= link "Animal", to: Routes.animais_path(@conn, :new), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link "Consultas", to: Routes.consultas_path(@conn, :new), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link "Especie", to: Routes.especie_path(@conn, :new), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link "Funcionarios", to: Routes.funcionario_path(@conn, :new), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link "Medicamento", to: Routes.medicamento_path(@conn, :new), class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link "Prescricao", to: Routes.prescricao_path(@conn, :new), class: "nav-link" %>
+        </li>
+    </ul>
+  </div>
+</nav>

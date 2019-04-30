@@ -1,0 +1,38 @@
+<h1>Show Funcionario</h1>
+
+<ul>
+
+  <li>
+    <strong>Matricula:</strong>
+    <%= @funcionario.matricula %>
+  </li>
+
+  <li>
+    <strong>Nome:</strong>
+    <%= @funcionario.nome %>
+  </li>
+
+  <li>
+    <strong>Endereco:</strong>
+    <%= @funcionario.endereco %>
+  </li>
+
+  <li>
+    <strong>Email:</strong>
+    <%= @funcionario.email %>
+  </li>
+
+  <li>
+    <strong>Crmv:</strong>
+    <%= @funcionario.crmv %>
+  </li>
+
+  <li>
+    <strong>Especialidade:</strong>
+    <%= @funcionario.especialidade %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.funcionario_path(@conn, :edit, @funcionario) %></span>
+<span><%= link "Back", to: Routes.funcionario_path(@conn, :index) %></span>

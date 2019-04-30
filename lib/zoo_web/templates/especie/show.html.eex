@@ -1,0 +1,23 @@
+<h1>Show Especie</h1>
+
+<ul>
+
+  <li>
+    <strong>Codespecie:</strong>
+    <%= @especie.codespecie %>
+  </li>
+
+  <li>
+    <strong>Nomeespecie:</strong>
+    <%= @especie.nomeespecie %>
+  </li>
+
+  <li>
+    <strong>Expectativaespecie:</strong>
+    <%= @especie.expectativaespecie %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: Routes.especie_path(@conn, :edit, @especie) %></span>
+<span><%= link "Back", to: Routes.especie_path(@conn, :index) %></span>

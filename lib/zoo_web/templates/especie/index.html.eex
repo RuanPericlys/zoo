@@ -1,0 +1,30 @@
+<h1>Listing Especies</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Codespecie</th>
+      <th>Nomeespecie</th>
+      <th>Expectativaespecie</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for especie <- @especies do %>
+    <tr>
+      <td><%= especie.codespecie %></td>
+      <td><%= especie.nomeespecie %></td>
+      <td><%= especie.expectativaespecie %></td>
+
+      <td>
+        <%= link "Show", to: Routes.especie_path(@conn, :show, especie) %>
+        <%= link "Edit", to: Routes.especie_path(@conn, :edit, especie) %>
+        <%= link "Delete", to: Routes.especie_path(@conn, :delete, especie), method: :delete, data: [confirm: "Are you sure?"] %>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "New Especie", to: Routes.especie_path(@conn, :new) %></span>
